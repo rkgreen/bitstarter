@@ -10,11 +10,12 @@ app.get('/', function(request, response) {
     var buffer = new Buffer("Hello World from index.html", "utf-8")  
       
 
-//    response.send(buffer.toString('utf-8', fs.readFileSync("index.html")));
+ response.send(buffer.toString('utf-8', fs.readFileSync("index.html")));
 
- fs.readFileSync('index.html', function (err, data) {
+/* fs.readFileSync('index.html', function (err, data) {
      if (err) throw err;
      console.log(data.toString());
+*/
 
 });
 
