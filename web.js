@@ -7,10 +7,10 @@ app.get('/', function(request, response) {
 
 //  var buffer = new Buffer(16);
     var fs = require('fs');
-    var buffer = new Buffer("Hello World from index.html", "utf-8")  
+    var buffer = new Buffer(fs.readFileSync('index.html'),'utf-8');  
       
 
- response.send(buffer.toString('utf-8', fs.readFileSync("index.html")));
+ response.send(buffer.toString());
 
 /* fs.readFileSync('index.html', function (err, data) {
      if (err) throw err;
