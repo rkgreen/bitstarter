@@ -5,17 +5,17 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
 //  response.send('Hello World 2!');
 
-    var buffer = new Buffer();
+//    var buffer = new Buffer();
     var fs = require('fs');
-    response.send(buffer.toString('utf-8', fs.readFileSync("index.html")));
+//    response.send(buffer.toString('utf-8', fs.readFileSync("index.html")));
 
-/* fs.readFileSync(index.html, function (err, data){
-     if (err) throw err:
-     console.log(data);
+ fs.readFileSync(index.html, function (err, data){
+//     if (err) throw err;
+     console.log(data.toString());
 
-var buffer = new Buffer("Hello World from index.html", "utf-8")
+// var buffer = new Buffer("Hello World from index.html", "utf-8")
 
-*/
+
 
 
 });
